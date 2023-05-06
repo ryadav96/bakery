@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  mode: "jit",
-  purge: ["./index.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
-  darkMode: false,
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bgPrimary: "#f4efe7",
+        secondary: "#353535",
+      }
+    },
   },
-  variants: {},
   plugins: [],
 };

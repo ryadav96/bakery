@@ -1,8 +1,15 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
+import { useHome } from "../pages/Home/homeContext";
 
-const Product = ({ product, addToCart, removeFromCart }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const Product = ({ product }) => {
+  const dispath = useHome()[1];
+  const addToCart = (product) => {
+    dispath({ type: "ADD_TO_CART", payload: product });
+  };
+
+  const removeFromCart = (product) => {
+    dispath({ type: "REMOVE_FROM_CART", payload: product });
+  };
 
   const handleAddToCart = () => {
     addToCart(product);
@@ -13,11 +20,7 @@ const Product = ({ product, addToCart, removeFromCart }) => {
   };
 
   return (
-    <div
-      className="group relative bg-white border border-gray-200 rounded-lg flex flex-col overflow-hidden"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className="group relative bg-white border border-gray-200 rounded-lg flex flex-col overflow-hidden">
       <div className="aspect-w-3 aspect-h-4 bg-gray-200 group-hover:opacity-75 sm:aspect-none sm:h-96">
         <img
           src={product.image}
@@ -28,34 +31,29 @@ const Product = ({ product, addToCart, removeFromCart }) => {
       <div className="flex-1 p-4 space-y-2 flex flex-col">
         <h3 className="text-sm font-medium text-gray-900">
           <a>
-            <span aria-hidden="true" className="absolute inset-0" />
+            <span aria-hidden="true" />
             {product.name}
           </a>
         </h3>
         <p className="text-sm text-gray-500">{product.description}</p>
         <div className="flex-1 flex flex-col justify-end">
-          <p className="text-base font-medium text-gray-900">{product.price}</p>
-        </div>
-        <div className="flex items-center justify-between">
-          {/* <p className="text-gray-700 font-medium">
+          <p className="text-base font-medium text-gray-900">
             ${product.price.toFixed(2)}
           </p>
-          {isHovered ? (
-            <>
-              <button
-                className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md"
-                onClick={handleAddToCart}
-              >
-                Add to cart
-              </button>
-              <button
-                className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md"
-                onClick={handleRemoveFromCart}
-              >
-                Remove from cart
-              </button>
-            </>
-          ) : null} */}
+        </div>
+        <div className="flex items-center justify-between">
+          <button
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded-full"
+            onClick={handleAddToCart}
+          >
+            + Add
+          </button>
+          <button
+            className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded-full"
+            onClick={handleRemoveFromCart}
+          >
+            Remove
+          </button>
         </div>
       </div>
     </div>
