@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { useHome } from "../pages/Home/homeContext";
+import { useProduct } from "../pages/Home/homeContext";
 
 const Product = ({ product }) => {
-  const dispath = useHome()[1];
+  const dispath = useProduct()[1];
   const addToCart = (product) => {
     dispath({ type: "ADD_TO_CART", payload: product });
   };

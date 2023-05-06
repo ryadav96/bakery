@@ -1,9 +1,9 @@
 import cart from "../assets/cart.svg";
 import Cart from "./Cart";
-import { useHome } from "../pages/Home/homeContext";
+import { useProduct } from "../pages/Home/homeContext";
 
 const Header = () => {
-  const [state, dispath] = useHome();
+  const [state, dispath] = useProduct();
 
   const cartItems = state.cart;
 

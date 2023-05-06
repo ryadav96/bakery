@@ -70,12 +70,12 @@ function HomeProvider({ ...props }) {
   return <HomeContext.Provider value={value} {...props} ></HomeContext.Provider>;
 }
 
-function useHome() {
+function useProduct() {
   const context = useContext(HomeContext);
   if (context === undefined) {
-    throw new Error(`useHome must be used within a HomeProvider`);
+    throw new Error(`useProduct must be used within a HomeProvider`);
   }
   return context;
 }
 
-export { HomeProvider, useHome };
+export { HomeProvider, useProduct };

@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { useHome } from "../pages/Home/homeContext";
+import { useProduct } from "../pages/Home/homeContext";
 
 const Cart = () => {
-  const [state, dispath] = useHome();
+  const [state, dispath] = useProduct();
 
   const { cart } = state;
 

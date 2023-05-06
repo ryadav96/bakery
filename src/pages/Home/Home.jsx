@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import Header from "../../components/Header";
 import Product from "../../components/Product";
-import { HomeProvider, useHome } from "./homeContext";
+import { HomeProvider, useProduct } from "./homeContext";
 import allProducts from "../../data/product";
 
 const HomePage = () => {
-  const [state, dispath] = useHome();
+  const [state, dispath] = useProduct();
   useEffect(() => {
     dispath({ type: "SET_PRODUCTS", payload: allProducts });
   }, []);
