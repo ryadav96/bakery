@@ -17,7 +17,7 @@ const Cart = () => {
     (total, product) => total + product.price * product.quantity,
     0
   );
-
+console.log("render");
   return (
     <div className="bg-white">
       <div className="p-4">

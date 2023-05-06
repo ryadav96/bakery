@@ -33,7 +33,7 @@ const products = [
   },
   {
     id: 5,
-    name: "Chocolate Croissant",
+    name: "COPY Chocolate Croissant",
     description: "A flaky croissant filled with rich chocolate.",
     price: 2.99,
     image:
@@ -41,7 +41,7 @@ const products = [
   },
   {
     id: 6,
-    name: "Blueberry Muffin",
+    name: "COPY Blueberry Muffin",
     description: "A moist muffin bursting with fresh blueberries.",
     price: 1.99,
     image:
@@ -49,7 +49,7 @@ const products = [
   },
   {
     id: 7,
-    name: "Cinnamon Roll",
+    name: "COPY Cinnamon Roll",
     description: "A warm, gooey cinnamon roll topped with icing.",
     price: 3.99,
     image:
@@ -57,7 +57,7 @@ const products = [
   },
   {
     id: 8,
-    name: "Banana Bread",
+    name: "COPY Banana Bread",
     description: "A classic loaf of banana bread, perfect for breakfast or a snack.",
     price: 5.99,
     image:
