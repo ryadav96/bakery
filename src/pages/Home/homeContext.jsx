@@ -67,7 +67,6 @@ function HomeProvider({ ...props }) {
   const [state, dispatch] = useReducer(homeReducer, HOME_INITIAL_STATE);
 
   const value = [state, dispatch];
-  console.log("HomeProvider", value);
   return <HomeContext.Provider value={value} {...props} ></HomeContext.Provider>;
 }
 
@@ -76,7 +75,6 @@ function useHome() {
   if (context === undefined) {
     throw new Error(`useHome must be used within a HomeProvider`);
   }
-  console.log("useHome", context);
   return context;
 }
 
