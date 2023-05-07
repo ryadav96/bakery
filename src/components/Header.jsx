@@ -34,7 +34,7 @@ const Header = () => {
         </button>
       </div>
       {isDrawerOpen && (
-        <div className="fixed top-0 right-0 bottom-0 w-1/2 bg-white z-10 shadow-lg transition-transform duration-300 transform translate-x-0">
+        <div className="fixed top-0 right-0 bottom-0 w-full md:w-1/2 bg-white z-10 shadow-lg transition-transform duration-300 transform translate-x-0">
           <div className="overflow-auto h-full pb-[100px]">
             <div className="p-6">
               <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
