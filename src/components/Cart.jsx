@@ -37,7 +37,7 @@ console.log("render");
                   <div className="flex justify-between text-base font-medium text-gray-900">
                     <h3>{product.name}</h3>
                     <p className="ml-4">
-                      {(product.quantity * product.price).toFixed(2)}
+                    ₹{(product.quantity * product.price).toFixed(2)}
                     </p>
                   </div>
                   <p className="mt-1 text-sm text-gray-500">
@@ -70,7 +70,7 @@ console.log("render");
         </ul>
         <div className="flex items-center justify-between mt-4">
           <p className="text-gray-700 font-medium">Total:</p>
-          <p className="text-gray-700 font-medium">${total.toFixed(2)}</p>
+          <p className="text-gray-700 font-medium">₹{total.toFixed(2)}</p>
         </div>
       </div>
     </div>
